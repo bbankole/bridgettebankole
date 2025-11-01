@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- The line above ^ details to the computer that if it 
+        is using Internet Explorer, render this page using the newest, 
+        most standard compliant mode available --> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bridgette Bankole</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap">
+        <script src="https://kit.fontawesome.com/bc34688c63.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <!-- div class="container" is used to group elements together -->
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo" width="700" height="auto">
+                    <ul id="sidemenu"> <!--- this will be the id used for javascript-->
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+
+                </nav>
+                <div class="header-text">
+                    <p>Software Developer</p>
+                    <h1>Hi, I'm <span>Bridgette</span><br>Bankole from New York</h1>
+                </div>
+            </div>
+        </div>
+        <!---------about--------->
+        <div id="about">
+           <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/sitting.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>
+                        Hi, I’m Bridgette Bankole — a New York–based Software Developer and storyteller with a passion for design, creativity, and meaningful digital experiences.
+                        I’m drawn to the intersection between art and logic, where code becomes a medium for expression and storytelling. My background blends analytical thinking 
+                        with a strong creative eye, allowing me to build interfaces and applications that are both intuitive and visually refined.
+                        Beyond development, I’ve always been fascinated by how technology shapes human connection — from podcasts and visual storytelling to data and digital design. 
+                        I approach each project with curiosity, empathy, and precision, aiming to create work that not only functions seamlessly but also resonates emotionally.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-End</span><br>HTML, CSS, JavaScript</li>
+                            <li><span>Back-End</span><br>Python, Java</li>
+                            <li><span>Frameworks and Tools</span><br>Docker, Git, Figma</li>
+                            <li><span>Soft Skills</span><br>Communcation, artistry, storytelling</li>
+                        </ul>
+                    </div>
+
+                      <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Rosebud, 2023</span><br>Interactive game based on Alien Invasion prototype using HTML, CSS, and Java.<br>Implemented advanced state management with modern JS features.</li>
+                            <li><span>Finze, 2025</span><br>Retail database modeled after ERPs, using MySQl and Docker.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Pace University</span><br>Bachelors of Arts, Computer Science</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+           </div> 
+        </div>
+<!---------------------services------------------------------->
+<div id="capabilities">
+    <div class="container">
+        <h1 class="sub-title">Capabilities</h1>
+        <div class="capabilities-list">
+            <div>
+                <i class="fa-solid fa-object-ungroup"></i>
+                <h2>Interactive Design & Seamless UX</h2>
+                <p> Established a strong foundation in visual design and structural integrity using 
+                    HTML5 and CSS3. <br> <br>Elevated static designs utilizing with interactive elements, using Javascript to 
+                    enhance user experience and functional performance.
+                </p>
+                <a href="#">Learn more</a> 
+            </div>
+
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Full-Stack Systems & Data Architecture</h2>
+                <p> Construct stable and scalable backend logic using Python and Java to manage data processing. <br><br>
+                    Architect complex relational databases (e.g retail ERP with MySQL) and utilize SQL for advanced querying, integrity, <br>
+                     and management. 
+                </p>
+                <a href="#">Learn more</a> 
+            </div>
+
+            <div>
+                <i class="fa-solid fa-infinity"></i>
+                <h2>Passion</h2>
+                <p> Looking for innovative ways to balance design and functionality
+                    to showcase the dichotomy between artistry and technology 
+                    in a seamless, impactful way.
+                </p>
+                    <a href="#">Learn more</a> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----------------portfolio------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src = "images/finze.png">
+                <div class="layer">
+                    <h3>Finze</h3>
+                    <p> Finze is modeled after ERP systems, like RetailVantage, to keep track of clients'
+                        account information and loan application decisions to optimize financial transactions
+                        and ensure data integrity.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+             <div class="work">
+                <img src = "images/rosebud.png">
+                <div class="layer">
+                    <h3>Rosebud</h3>
+                    <p> Rosebud was a testament to my ability to apply my programming skills creatively.
+                        The objective was to allow the user to eliminate treats in the fleet one by one 
+                        using the player, who is a cat.
+                    </p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a> 
+                </div>
+            </div>
+            
+             <div class="work">
+                <img src = "images/moietty.png">
+                <div class="layer">
+                    <h3>Moietty</h3>
+                    <p> Inspired by the concept of moiety—life split into equal parts—
+                        this podcast explores the balance of light and shadow within us.
+                        Using famous cinemato
+                    </p>
+                    <a href="https://open.spotify.com/show/7HOQTvQQWxZgnGetT8HVhS"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div> 
+            
+<!--- make sure to close img src tag-->
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-------------------- contact ----------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> bankole.bridgette@gmail.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/bridgette-bankole-3a8a59252/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea> <!--- make sure name matches the text google form-->
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+
+                <span id="msg"></span>
+
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>Copyright @ Bridgette. Made with <i class="fa-solid fa-heart"></i></p>
+        </div>
+    </div>
+</div>
+
+        <script>
+
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+
+            function opentab(tabname) {
+                for (tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for (tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+
+        </script>
+
+        <script>
+            var menu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+
+            function closemenu(){
+                sidemenu.style.right = "-200px"; /* adds functionality to close the menu */
+            }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwAyd1RCOFNXdaye3m-az-VUpw0uYczVPH3gGPRZLQvKzswfzjpat16nLBd0o0J6BlI/exec'
+            const form = document.forms['submit-to-google-sheet']
+
+            const msg = document.getElementById("msg")
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => {
+                        msg.innerHTML = "Submision received!"
+                        form.reset() // added form set further up to work //
+                        setTimeout(function(){
+                            msg.innerHTML = ""
+                        }, 5000)
+                    })
+                    .catch(error => console.error('Error!', error.message))
+                })
+        </script>
+    </body>
+
+    <!-- open portfolio by right clicking with the live
+     server-->
+</html>
+
