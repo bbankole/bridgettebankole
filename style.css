@@ -234,49 +234,69 @@ nav ul li a:hover::after {
 }
 
 .logo-bg {
-  background-color: #E5EDF0; /* or a soft off-white */
-  padding: 20px;
-  border-radius: 0px;
-  object-fit: contain;
+  background-color: #E5EDF0;
 }
 
 
 .work-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-gap: 40px;
     margin: 50px;
 }
 
+@media only screen and (max-width: 1100px) {
+    .work-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .work-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-gap: 24px;
+        margin: 30px;
+    }
+}
+
 .work {
-    /* border radius is optional, if you want to add the rounded effect */
     position: relative;
     overflow: hidden;
+    aspect-ratio: 1 / 1;
 }
 
 .work img {
     width: 100%;
+    height: 100%;
     display: block;
+    object-fit: cover;
     transition: transform 0.5s;
+}
+
+.work img.logo-bg {
+    object-fit: contain;
+    background: #E5EDF0;
+    padding: 20px;
 }
 
 .layer {
     width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(251, 253, 255, 0.655), #cec0b3);
+    height: 100%;
+    background: linear-gradient(rgba(251, 253, 255, 0.92), rgba(206, 192, 179, 0.96));
     border-radius: 10px;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+    inset: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 40px;
+    padding: 1.25rem 1rem;
     text-align: center;
     font-size: 14px;
-    transition: height 0.5s;
+    opacity: 0;
+    transition: opacity 0.35s ease;
 }
 
 .layer p {
@@ -284,35 +304,37 @@ nav ul li a:hover::after {
 }
 
 .layer h3 {
-
     color: #0d0d0d;
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 0.75rem;
+    font-size: clamp(1rem, 2.2vw, 1.25rem);
+}
 
+.layer p {
+    line-height: 1.45;
+    max-width: 100%;
 }
 
 .layer a {
-    margin-top: 20px;
+    margin-top: 1rem;
+    flex-shrink: 0;
     color:#6f95bd;
     text-decoration: none;
     font-size: 18px;
-    line-height: 60px;
+    line-height: 52px;
     background: #cec0b3;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%; /* makes background for external link, circle */
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
     text-align: center;
-
 }
 
 .work:hover img {
-
-    transform: scale(1.1);
-
+    transform: scale(1.05);
 }
 
 .work:hover .layer {
-    height: 100%;
+    opacity: 1;
 }
 
 .btn {
